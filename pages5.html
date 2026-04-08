@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎮 Game Detail</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-animation"></div>
+<div class="cursor-glow"></div>
+<div class="bg-animation"></div>
+<div class="particles"></div>
+<div class="cursor-glow"></div>
+
+<nav>
+  <h2>🎮 Game hub</h2>
+</nav>
+
+<section class="card">
+
+  <h1>🎮 Game Detail</h1>
+
+  <!-- GAME INFO -->
+  <div class="detail-box">
+    <img id="detailImage" src="" alt="Game Image">
+
+    <div class="info">
+      <h2 id="gameTitle">Loading...</h2>
+      <p id="gameDesc"></p>
+    </div>
+  </div>
+
+
+  <div class="trailer-box">
+    <h3>🎬 Trailer</h3>
+    <iframe id="trailer" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <br>
+  <a href="pages4.html" class="btn">⬅️ Kembali</a>
+
+</section>
+
+<script src="scripts.js"></script>
+
+<script>
+
+function showDetailPage() {
+  let game = JSON.parse(localStorage.getItem("selectedGame"));
+
+  if (!game) return;
+
+  document.getElementById("gameTitle").innerText = game.name;
+  document.getElementById("gameDesc").innerText = game.desc;
+  document.getElementById("detailImage").src = game.img;
+  document.getElementById("trailer").src = game.trailer;
+}
+
+showDetailPage();
+</script>
+
+</body>
+</html>

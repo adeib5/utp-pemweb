@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>🎮 Gamehub</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.hidden {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+  <div class="bg-animation"></div>
+<div class="cursor-glow"></div>
+<div class="bg-animation"></div>
+<div class="particles"></div>
+<div class="cursor-glow"></div>
+<nav>
+  <h2>🎮 Gamehub</h2>
+</nav>
+
+<section class="card" id="resultPage">
+  <h1>🎯 Your Game</h1>
+
+  <h2 id="result">Loading...</h2>
+
+  <div class="image-container">
+    <img id="gameImage" src="">
+  </div>
+
+  <button class="btn" onclick="showDetailPage()">🔍 Lihat Detail</button>
+  <button class="btn" onclick="goBack()">⬅️ Pilih Lagi</button>
+</section>
+
+
+<section class="card hidden" id="detailPage">
+  <h1>📄 Detail Game</h1>
+
+  <div id="detail"></div>
+
+  <iframe id="trailer" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
+
+  <br><br>
+  <button class="btn" onclick="backToResult()">⬅️ Kembali</button>
+  <button class="btn" onclick="goBack()">🏠 Ke Menu</button>
+</section>
+
+
+<script src="scripts.js"></script>
+
+<script>
+
+function showDetailPage() {
+  document.getElementById("resultPage").classList.add("hidden");
+  document.getElementById("detailPage").classList.remove("hidden");
+
+  showDetail();
+}
+
+
+function backToResult() {
+  document.getElementById("detailPage").classList.add("hidden");
+  document.getElementById("resultPage").classList.remove("hidden");
+}
+
+function goBack() {
+  window.location.href = "pages3.html"; 
+}
+</script>
+
+</body>
+</html>

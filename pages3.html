@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>🎮 Game hub</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.hidden {
+  display: none;
+}
+</style>
+</head>
+
+<body>
+  <div class="bg-animation"></div>
+<div class="cursor-glow"></div>
+<div class="bg-animation"></div>
+<div class="particles"></div>
+<div class="cursor-glow"></div>
+<nav>
+  <h2>🎮 Game hub</h2>
+</nav>
+
+<section class="card">
+  <h1>Find Your Game 🎯</h1>
+
+  <div class="form-group">
+  <label>Genre</label>
+  <select id="genre">
+    <option value="rpg">RPG</option>
+    <option value="action">Action</option>
+    <option value="openworld">Open World</option>
+    <option value="horror">Horror</option>
+    <option value="racing">Racing</option>
+    <option value="platformer">Platformer</option>
+  </select>
+</div>
+
+  <div class="form-group">
+    <label>Mood</label>
+    <select id="mood">
+      <option value="chill">Santai</option>
+      <option value="hardcore">hardcore</option>
+      <option value="story">best story</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Platform</label>
+    <select id="platform">
+      <option value="pc">PC</option>
+      <option value="console">Console</option>
+    </select>
+  </div>
+
+  <button onclick="savePreference()">Find Game 🔥</button>
+</section>
+
+<script src="scripts.js"></script>
+
+</body>
+</html>
